@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'cbv_app/base.html' %}
+
+{% block body_block %}
+    <h1>These are the school details.</h1>
+    <h3>Name: {{object.name}}</h3>
+    <h3>Principal: {{object.principal}}</h3>
+    <h3>Location: {{object.location}}</h3>
+
+    <h3>Students</h3>
+    {% for student in object.students.all %}
+        <h4>{{student.name}} who is {{student.age}} years old</h4>
+    {% endfor %}
+{% endblock %}
