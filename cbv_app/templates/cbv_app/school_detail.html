@@ -11,4 +11,6 @@
     {% for student in object.students.all %}
         <h4>{{student.name}} who is {{student.age}} years old</h4>
     {% endfor %}
+    <p><a class="btn btn-warning" href="{% url 'update' object.pk %}">Update</a></p>
+    <a class="btn btn-danger" href="{% url 'delete' object.pk %}">Delete</a>
 {% endblock %}

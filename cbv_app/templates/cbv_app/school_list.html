@@ -6,6 +6,7 @@
     <h1>Welcome to a list of all the Schools</h1>
     {% for school in school_list %}
         <a href="{% url 'detail' school.pk %}"><h2><li>{{school.name}}</li></h2></a>
+        
     {% endfor %}
 </ol>
 {% endblock %}
